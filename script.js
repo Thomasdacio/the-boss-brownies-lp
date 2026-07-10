@@ -34,4 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transition = `all 0.5s ease ${index * 0.1}s`;
         observer.observe(item);
     });
+
+    // Carousel de depoimentos
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+
+    if (prevBtn && nextBtn && testimonialGrid) {
+        prevBtn.addEventListener('click', () => {
+            const scrollAmount = testimonialGrid.clientWidth;
+            // Se estiver no início, vai para o final
+            if (testimonialGrid.scrollLeft <= 0) {
+                testimonialGrid.scrollTo({ left: testimonialGrid.scrollWidth, behavior: 'smooth' });
+            } else {
+                testimonialGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            const scrollAmount = testimonialGrid.clientWidth;
+            // Se estiver no final (com uma folga de 5px para arredondamento), volta pro início
+            if (testimonialGrid.scrollLeft + scrollAmount >= testimonialGrid.scrollWidth - 5) {
+                testimonialGrid.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                testimonialGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        });
+    }
 });

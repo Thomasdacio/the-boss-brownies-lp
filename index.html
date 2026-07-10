@@ -36,6 +36,9 @@
             <a href="#depoimentos">Depoimentos</a>
             <a href="#contato">Contato</a>
         </nav>
+        <button class="mobile-menu-btn">
+            <i class="ph ph-list"></i>
+        </button>
         <div class="nav-cta">
             <a href="#contato" class="btn btn-primary">Faça seu Pedido</a>
         </div>
@@ -119,144 +122,134 @@
     </section>
 
     <!-- Sabores Section (Cardápio) -->
-    <section id="sabores" class="menu-section">
-        <div class="menu-header">
-            <h2 class="section-title">Nossos <span class="text-accent">Sabores</span></h2>
+    <section id="sabores" class="menu-section-modern">
+        <div class="menu-header-modern">
+            <h2 class="menu-title-modern">Nossos <span class="text-accent">Sabores</span></h2>
+            <div class="menu-filters">
+                <button class="menu-filter-btn active" data-filter="classicos">Clássicos</button>
+                <button class="menu-filter-btn" data-filter="especiais">Especiais</button>
+            </div>
         </div>
 
-        <div class="menu-container">
+        <div class="menu-container-modern">
             <!-- Clássicos -->
-            <div class="menu-category">
-                <div class="category-title-wrapper">
-                    <i class="ph-bold ph-cube"></i>
-                    <h3 class="category-title">Clássicos</h3>
+            <div class="menu-grid-modern" id="grid-classicos">
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-tradicional.png" alt="Brownie Tradicional">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Tradicional</h4>
+                        <p class="menu-item-desc">"Chocolatão": massa fofinha com o meio molhadinho</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 7,00</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-tradicional.png" alt="Brownie Tradicional">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Tradicional</h4>
-                                <span class="menu-item-price">R$7,00</span>
-                            </div>
-                            <p class="menu-item-desc">"Chocolatão": massa fofinha com o meio molhadinho</p>
+
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-mms.png" alt="Brownie M&M's">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">M&M's</h4>
+                        <p class="menu-item-desc">"Baludo": Recheado de M&M's</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 8,00</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-mms.png" alt="Brownie M&M's">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">M&M's</h4>
-                                <span class="menu-item-price">R$8,00</span>
-                            </div>
-                            <p class="menu-item-desc">"Baludo": Recheado de M&M's</p>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-oreo.png" alt="Brownie Oreo">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Oreo</h4>
+                        <p class="menu-item-desc">Recheadíssimo com biscoito Oreo</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 8,00</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-cookie.png" alt="Brownie Oreo">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Oreo</h4>
-                                <span class="menu-item-price">R$8,00</span>
-                            </div>
-                            <p class="menu-item-desc">Recheadíssimo com biscoito Oreo</p>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-snickers.png" alt="Brownie Snickers">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Snickers</h4>
+                        <p class="menu-item-desc">"Chefia": Recheado com o biscoito de amendoim que mata a sua fome</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 8,50</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-snickers.png" alt="Brownie Snickers">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Snickers</h4>
-                                <span class="menu-item-price">R$8,50</span>
-                            </div>
-                            <p class="menu-item-desc">"Chefia": Recheado com o biscoito de amendoim que mata a sua fome</p>
-                        </div>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-twix.png" alt="Brownie Twix">
                     </div>
-
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-twix.png" alt="Brownie Twix">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Twix</h4>
-                                <span class="menu-item-price">R$8,50</span>
-                            </div>
-                            <p class="menu-item-desc">"Patrão": Massa recheada com Twix, biscoito de chocolate com caramelo</p>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Twix</h4>
+                        <p class="menu-item-desc">"Patrão": Massa recheada com Twix, biscoito de chocolate com caramelo</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 8,50</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Especiais -->
-            <div class="menu-category">
-                <div class="category-title-wrapper">
-                    <i class="ph-bold ph-star"></i>
-                    <h3 class="category-title">Especiais</h3>
+            <div class="menu-grid-modern hidden" id="grid-especiais">
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-cafe.png" alt="Brownie de Café">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Café</h4>
+                        <p class="menu-item-desc">"Pilhado": Massa de chocolate com um toque especial de café</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 10,00</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-cafe.png" alt="Brownie de Café">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Café</h4>
-                                <span class="menu-item-price">R$10,00</span>
-                            </div>
-                            <p class="menu-item-desc">"Pilhado": Massa de chocolate com um toque especial de café</p>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-nutella.png" alt="Brownie Nutella">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Nutella</h4>
+                        <p class="menu-item-desc">"Supreme": Massa cortada ao meio com uma camada deliciosa de Nutella</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 10,00</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-nutella.png" alt="Brownie Nutella">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Nutella</h4>
-                                <span class="menu-item-price">R$10,00</span>
-                            </div>
-                            <p class="menu-item-desc">"Supreme": Massa cortada ao meio com uma camada deliciosa de Nutella</p>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-red-velvet.png" alt="Brownie Red Velvet">
+                    </div>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Red Velvet</h4>
+                        <p class="menu-item-desc">Aveludado, intenso, inesquecível. Com gotas de chocolate branco para adoçar o paladar.</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 8,00</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/brownie-red-velvet.png" alt="Brownie Red Velvet">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Red Velvet</h4>
-                                <span class="menu-item-price">R$8,00</span>
-                            </div>
-                            <p class="menu-item-desc">Aveludado, intenso, inesquecível. Com gotas de chocolate branco para adoçar o paladar.</p>
-                        </div>
+                <div class="menu-card-modern">
+                    <div class="menu-card-img-wrapper">
+                        <img src="./assets/brownie-brookie.png" alt="Brownie Brookie">
                     </div>
-
-                    <div class="menu-card">
-                        <div class="menu-card-img">
-                            <img src="./assets/background-brownie.png" alt="Brownie Brookie">
-                        </div>
-                        <div class="menu-card-content">
-                            <div class="menu-card-header">
-                                <h4 class="menu-item-name">Brookie</h4>
-                                <span class="menu-item-price">R$10,00</span>
-                            </div>
-                            <p class="menu-item-desc">O encontro perfeito entre o brownie e o cookie clássico.</p>
+                    <div class="menu-card-info">
+                        <h4 class="menu-item-name">Brookie</h4>
+                        <p class="menu-item-desc">O encontro perfeito entre o brownie e o cookie clássico.</p>
+                        <div class="menu-order-btn">
+                            <span class="order-price">R$ 10,00</span>
                         </div>
                     </div>
                 </div>
@@ -266,67 +259,68 @@
 
     <!-- Depoimentos -->
     <section id="depoimentos" class="testimonials">
-        <h2 class="section-title">O que <span class="text-accent">Dizem</span></h2>
+        <h2 class="section-title">O que dizem nossos <span class="text-accent">clientes</span></h2>
         <div class="carousel-container">
-            <button class="carousel-btn prev-btn" aria-label="Anterior"><i class="ph-bold ph-caret-left"></i></button>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <img src="./assets/depoimento-1.png" alt="Depoimento Mariana S." class="testimonial-img-main">
-                    <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <div class="testimonial-img-wrapper">
+                        <img src="./assets/depoimento-1.png" alt="Depoimento Mariana S." class="testimonial-img-main">
                     </div>
-                    <div class="testimonial-author">Mariana S.</div>
+                    <div class="testimonial-footer">
+                        <div class="stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <div class="testimonial-author">Mariana S.</div>
+                    </div>
                 </div>
                 <div class="testimonial-card">
-                    <img src="./assets/depoimento-2.png" alt="Depoimento Lucas T." class="testimonial-img-main">
-                    <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <div class="testimonial-img-wrapper">
+                        <img src="./assets/depoimento-2.png" alt="Depoimento Lucas T." class="testimonial-img-main">
                     </div>
-                    <div class="testimonial-author">Lucas T.</div>
+                    <div class="testimonial-footer">
+                        <div class="stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <div class="testimonial-author">Lucas T.</div>
+                    </div>
                 </div>
                 <div class="testimonial-card">
-                    <img src="./assets/depoimento-3.png" alt="Depoimento Camila R." class="testimonial-img-main">
-                    <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <div class="testimonial-img-wrapper">
+                        <img src="./assets/depoimento-3.png" alt="Depoimento Camila R." class="testimonial-img-main">
                     </div>
-                    <div class="testimonial-author">Camila R.</div>
+                    <div class="testimonial-footer">
+                        <div class="stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <div class="testimonial-author">Camila R.</div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-btn next-btn" aria-label="Próximo"><i class="ph-bold ph-caret-right"></i></button>
         </div>
     </section>
 
     <!-- Instagram Feed (Vitrine Estática) -->
     <section id="instagram-feed" class="instagram-section">
         <div class="instagram-header">
-            <h2 class="section-title">Siga no <span class="text-accent">Instagram</span></h2>
+            <h2 class="section-title">Nos siga no <span class="text-accent">Instagram</span></h2>
             <p>Acompanhe nossas fornadas diárias e novidades irresistíveis.</p>
         </div>
 
         <div class="insta-grid">
             <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="insta-post">
-                <img src="./assets/insta1.png" alt="Instagram post">
+                <img src="./assets/Insta1.jpg" alt="Instagram post">
                 <div class="insta-overlay">
                     <i class="ph-fill ph-instagram-logo"></i>
                 </div>
             </a>
             <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="insta-post">
-                <img src="./assets/insta2.png" alt="Instagram post">
+                <img src="./assets/Insta2.jpg" alt="Instagram post">
                 <div class="insta-overlay">
                     <i class="ph-fill ph-instagram-logo"></i>
                 </div>
             </a>
             <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="insta-post">
-                <img src="./assets/hero_brownie.png" alt="Instagram post">
-                <div class="insta-overlay">
-                    <i class="ph-fill ph-instagram-logo"></i>
-                </div>
-            </a>
-            <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="insta-post">
-                <img src="./assets/quem_somos_brownie.png" alt="Instagram post">
+                <img src="./assets/Insta3.JPG" alt="Instagram post">
                 <div class="insta-overlay">
                     <i class="ph-fill ph-instagram-logo"></i>
                 </div>
@@ -340,35 +334,36 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="contact">
-        <div class="contact-card">
-            <h2>Ficou com <span class="text-accent">Vontade?</span></h2>
-            <p>Garanta já o seu brownie The Boss! Entre em contato com a gente pelo WhatsApp ou mande uma DM no
-                Instagram.</p>
-            <div class="contact-buttons">
-                <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="btn btn-whatsapp"><i
-                        class="ph-fill ph-whatsapp-logo"></i> Chamar no WhatsApp</a>
-                <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="btn btn-instagram"><i
-                        class="ph-fill ph-instagram-logo"></i> Seguir no Instagram</a>
+    <section id="contato" class="contact-modern">
+        <div class="contact-modern-container">
+            <div class="contact-info">
+                <span class="contact-subtitle">CONTATO</span>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Quer um <span class="text-accent">brownie?</span></h2>
+                <div class="contact-details">
+                    <p>Para entrar em contato ou saber mais sobre o nosso trabalho você pode usar os links abaixo.</p>
+                </div>
+                <div class="contact-buttons-modern">
+                    <a href="https://wa.me/seu-numero" target="_blank" class="btn btn-outline-white"><i class="ph-bold ph-whatsapp-logo"></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/theboss_brownies/" target="_blank" class="btn btn-outline-white"><i class="ph-bold ph-instagram-logo"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="contact-images">
+                <img src="./assets/imagem-contato-2.JPG" alt="Brownie 2" class="contact-img contact-img-2">
             </div>
         </div>
     </section>
 
-    <!-- Final Quote -->
-    <section class="final-quote-section">
-        <blockquote class="final-quote">
-            <i class="ph-fill ph-quotes"></i>
-            <p>"Brownie é compartilhar momentos bons, brownie é temperar o dia com felicidade."</p>
-        </blockquote>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-quote">
+            <i class="ph-fill ph-quotes"></i>
+            <p>"Brownie é compartilhar momentos bons, brownie é temperar o dia com felicidade."</p>
+        </div>
         <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-text-cursive">The Boss</span>
-                <span class="logo-text-bold">BROWNIES</span>
-            </div>
+            <a href="#" class="logo footer-logo-link">
+                <span class="logo-text-serif">THE BOSS</span>
+                <span class="logo-text-cursive">Brownies</span>
+            </a>
             <p>© 2026 The Boss Brownies. Todos os direitos reservados.</p>
             <div class="footer-socials">
                 <a href="#"><i class="ph ph-instagram-logo"></i></a>

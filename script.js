@@ -9,6 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
+    // Mobile menu toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            } else {
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            });
+        });
+    }
 
     // Animações simples para os cards do menu
     const observerOptions = {
@@ -59,6 +85,35 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 testimonialGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
+        });
+    }
+
+    // Filtros do Menu Moderno
+    const filterBtns = document.querySelectorAll('.menu-filter-btn');
+    const menuGrids = document.querySelectorAll('.menu-grid-modern');
+
+    if (filterBtns.length > 0 && menuGrids.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active de todos os botoes
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Adiciona active no botao clicado
+                btn.classList.add('active');
+
+                // Pega o filtro (classicos ou especiais)
+                const filter = btn.getAttribute('data-filter');
+
+                // Esconde todos os grids
+                menuGrids.forEach(grid => {
+                    grid.classList.add('hidden');
+                });
+
+                // Mostra o grid correto
+                const targetGrid = document.getElementById(`grid-${filter}`);
+                if (targetGrid) {
+                    targetGrid.classList.remove('hidden');
+                }
+            });
         });
     }
 });

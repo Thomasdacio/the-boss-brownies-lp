@@ -760,10 +760,15 @@ body {
 
 .carousel-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 20px;
+}
+
+.carousel-controls-mobile {
+    display: none;
 }
 
 .testimonial-grid {
@@ -1276,13 +1281,62 @@ body {
 }
 
 @media (max-width: 768px) {
+    .instagram-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .instagram-header, .instagram-action {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
     .insta-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 5px;
+        gap: 2px;
+    }
+
+    .insta-post {
+        border-radius: 0;
     }
 
     .testimonial-card {
-        flex: 0 0 70%;
+        flex: 0 0 80%;
+        margin: 0 10%;
+    }
+
+    .testimonial-grid {
+        overflow-x: hidden;
+        scroll-snap-type: none;
+        gap: 0;
+    }
+
+    .carousel-controls-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .carousel-btn {
+        background-color: var(--accent-light);
+        color: var(--text-dark);
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 1.2rem;
+    }
+
+    .carousel-btn:hover {
+        background-color: var(--white);
+        transform: scale(1.1);
     }
 
     .testimonials, .contact-modern {

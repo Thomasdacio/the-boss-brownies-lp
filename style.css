@@ -215,7 +215,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 5% 40px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('./assets/background-brownie (2).png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('./assets/background-brownie.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

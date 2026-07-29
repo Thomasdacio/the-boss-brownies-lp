@@ -84,7 +84,6 @@ body {
 }
 
 .navbar.scrolled {
-    padding: 15px 5%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -1296,6 +1295,11 @@ body {
     .instagram-header, .instagram-action {
         padding-left: 8%;
         padding-right: 8%;
+    }
+
+    .instagram-header .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
     }
 
     .insta-grid {

@@ -633,26 +633,30 @@ body {
     background-color: #FFC107; /* Yellow active color */
 }
 
-@keyframes fadeInMenu {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+
+.menu-container-modern {
+    display: grid;
+    grid-template-areas: "stack";
 }
 
 .menu-grid-modern {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-    animation: fadeInMenu 0.5s ease-out forwards;
+    grid-area: stack;
+    opacity: 1;
+    visibility: visible;
+    /* Animação suave para quando o elemento ENTRA na tela */
+    transition: opacity 0.8s ease;
 }
 
 .menu-grid-modern.hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* Transição rápida quando o elemento SAI da tela */
+    transition: opacity 0.1s ease, visibility 0s 0.1s;
 }
 
 .menu-card-modern {
